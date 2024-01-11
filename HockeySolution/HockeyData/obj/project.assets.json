@@ -8,24 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sbell\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\sbell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
+      "projectUniqueName": "C:\\Users\\sbell\\Desktop\\Winter 2024\\GitHub\\A04\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
       "projectName": "HockeyData",
-      "projectPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
+      "projectPath": "C:\\Users\\sbell\\Desktop\\Winter 2024\\GitHub\\A04\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
       "packagesPath": "C:\\Users\\sbell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\obj\\",
+      "outputPath": "C:\\Users\\sbell\\Desktop\\Winter 2024\\GitHub\\A04\\ClassWorkBook\\HockeySolution\\HockeyData\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\sbell\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
