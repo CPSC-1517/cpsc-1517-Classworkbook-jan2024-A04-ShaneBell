@@ -1,4 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿using ValidationUtilities;
 
 namespace Hockey.Data
 {
@@ -11,9 +11,9 @@ namespace Hockey.Data
         //The green squiggles are saying they are strings and therefore not nullable
         //can use ? after string to allow nulls
         //This can also be managed in the constructor
-        private string? _birthPlace;
-        private string? _firstName;
-        private string? _lastName;
+        private string _birthPlace;
+        private string _firstName;
+        private string _lastName;
         private int _heightInInches;
         private int _weightInPounds;
         private DateOnly _dateOfBirth;
@@ -34,7 +34,7 @@ namespace Hockey.Data
             {
                 //empty string BAD
                 //Space BAD
-                if (string.IsNullOrWhiteSpace(value))
+                if (Utilities.IsNullOrEmptyOrWhiteSpace(value))
                 {
                     throw new Exception("Birth Place cannot be empty!");
                 }
@@ -42,7 +42,78 @@ namespace Hockey.Data
             }
         }
 
-        
+        public string FirstName
+        {
+            get
+            {
+                return _firstName;
+            }
+            set
+            {
+                //empty string BAD
+                //Space BAD
+                if (Utilities.IsNullOrEmptyOrWhiteSpace(value))
+                {
+                    throw new Exception("First Name cannot be empty!");
+                }
+                _firstName = value;
+            }
+        }
+
+        public string LastName
+        {
+            get
+            {
+                return _lastName;
+            }
+            set
+            {
+                //empty string BAD
+                //Space BAD
+                if (Utilities.IsNullOrEmptyOrWhiteSpace(value))
+                {
+                    throw new Exception("last Name cannot be empty!");
+                }
+                _lastName = value;
+            }
+        }
+
+        public int WeightInPounds
+        {
+            get
+            {
+                return _weightInPounds;
+            }
+            set
+            {
+                //empty string BAD
+                //Space BAD
+                if (value < 0)
+                {
+                    throw new Exception("Weight must be positive");
+                }
+                _weightInPounds = value;
+            }
+        }
+
+        public int HeightInInches
+        {
+            get
+            {
+                return _heightInInches;
+            }
+            set
+            {
+                //empty string BAD
+                //Space BAD
+                if (value < 0)
+                {
+                    throw new Exception("Height must be positive");
+                }
+                _heightInInches = value;
+            }
+        }
+
         public DateOnly DateOfBirth
         {
             get
@@ -58,17 +129,7 @@ namespace Hockey.Data
                 _dateOfBirth = value;
             }
         }
-        //public string FirstName
-        //{
-        //    get
-        //    {
-        //        return _firstName;
-        //    }
-        //    set
-        //    {
-        //        _firstName = value;
-        //    }
-        //}
+       
 
         //public string FirstName { get; set; }
         //auto implemented property
@@ -78,11 +139,33 @@ namespace Hockey.Data
         public Shot Shot { get; set; }
 
 
-    //TODO: complete the remaing properties for the fields
-    //strings must not be null,empty,whitespace
-    //weight and height must be >=0
+        //TODO: complete the remaing properties for the fields
+        //strings must not be null,empty,whitespace
+        //weight and height must be >=0
 
 
-
+        //Default Constructor
+        public HockeyPlayer()
+        {
+            FirstName = "bob";//string.Empty;//This is a constant for ""
+            LastName = "smith";    
+            BirthPlace= "a";
+            DateOfBirth= new DateOnly();
+            WeightInPounds=0;
+            HeightInInches=0;
+            Position = Position.Center;
+            Shot = Shot.Right;
+        }
+        public HockeyPlayer(string birthPlace, string firstName, string lastName, int heightInInches, int weightInPounds, DateOnly dateOfBirth,  Position position, Shot shot)
+        {
+            BirthPlace = birthPlace;
+            FirstName = firstName;
+            LastName = lastName;
+            HeightInInches = heightInInches;
+            WeightInPounds = weightInPounds;
+            DateOfBirth = dateOfBirth;            
+            Position = position;
+            Shot = shot;
+        }
     }
 }
