@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gMqS2beKZkVujlaI0UBtoWcrVv6QEWms/jfco3ZWeiSps2/3QYidJEq7wAO0gTdm7eaM9KxggIMnPAlYVU+jsw==",
+  "dgSpecHash": "Zyb3vTCulmOcVpbtBvSHx71yeIHM+U6t4eCSBL7UorzwgRZICcOqnYDJK+2Cu4CgGyB6rCJBlRtm5WgffeLHVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyConsoleApp\\HockeyConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyConsoleApp\\HockeyConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sbell\\.nuget\\packages\\fluentassertions\\6.12.0\\fluentassertions.6.12.0.nupkg.sha512",
+    "C:\\Users\\sbell\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\sbell\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+  ],
   "logs": []
 }

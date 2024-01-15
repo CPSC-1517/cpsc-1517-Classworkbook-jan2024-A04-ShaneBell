@@ -147,12 +147,12 @@ namespace Hockey.Data
         //Default Constructor
         public HockeyPlayer()
         {
-            FirstName = "bob";//string.Empty;//This is a constant for ""
-            LastName = "smith";    
-            BirthPlace= "a";
-            DateOfBirth= new DateOnly();
-            WeightInPounds=0;
-            HeightInInches=0;
+            _firstName = "bob";//string.Empty;//This is a constant for ""
+            _lastName = "smith";    
+            _birthPlace= "a";
+            _dateOfBirth= new DateOnly();
+            _weightInPounds=0;
+            _heightInInches=0;
             Position = Position.Center;
             Shot = Shot.Right;
         }
