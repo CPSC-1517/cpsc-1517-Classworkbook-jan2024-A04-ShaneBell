@@ -1,0 +1,15 @@
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\bin\Debug\net7.0\ClassReview.deps.json
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\bin\Debug\net7.0\ClassReview.dll
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\bin\Debug\net7.0\ClassReview.pdb
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\bin\Debug\net7.0\Utilities.dll
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\bin\Debug\net7.0\Utilities.pdb
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.csproj.AssemblyReference.cache
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.AssemblyInfoInputs.cache
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.AssemblyInfo.cs
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.csproj.CoreCompileInputs.cache
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.csproj.CopyComplete
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.dll
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\refint\ClassReview.dll
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ClassReview.pdb
+C:\Users\sbell\Downloads\ClassReview\ClassReview\ClassReview\obj\Debug\net7.0\ref\ClassReview.dll

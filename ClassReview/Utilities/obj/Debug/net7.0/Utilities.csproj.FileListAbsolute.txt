@@ -1,0 +1,11 @@
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\bin\Debug\net7.0\Utilities.deps.json
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\bin\Debug\net7.0\Utilities.dll
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\bin\Debug\net7.0\Utilities.pdb
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\Utilities.AssemblyInfo.cs
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\Utilities.dll
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\refint\Utilities.dll
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\Utilities.pdb
+C:\Users\sbell\Downloads\ClassReview\ClassReview\Utilities\obj\Debug\net7.0\ref\Utilities.dll
