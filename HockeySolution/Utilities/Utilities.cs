@@ -28,6 +28,12 @@
             result = value < 0 ? true : false;
             return result;
         }
+        public static bool IsNegative(double value)
+        {
+            return value < 0;
+        }
+
+
 
     }
 }
