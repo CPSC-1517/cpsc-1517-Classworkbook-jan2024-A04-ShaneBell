@@ -17,6 +17,7 @@ namespace Hockey.Data
         private int _heightInInches;
         private int _weightInPounds;
         private DateOnly _dateOfBirth;
+        private int _jerseyNumber;
 
         //Properties
         // allow acccess to our fields (public)
@@ -24,6 +25,21 @@ namespace Hockey.Data
         //must have a get
         //set can be private (only code in the class can use it)
 
+        public int JerseyNumber
+        {
+            get
+            {
+                return _jerseyNumber;
+            }
+            set
+            {
+                if (value < 1 || value > 98)
+                {
+                    throw new Exception("Jersey number out of range");
+                }
+                _jerseyNumber = value;
+            }
+        }
         public string BirthPlace
         {
             get
@@ -129,7 +145,7 @@ namespace Hockey.Data
                 _dateOfBirth = value;
             }
         }
-       
+
 
         //public string FirstName { get; set; }
         //auto implemented property
@@ -148,24 +164,31 @@ namespace Hockey.Data
         public HockeyPlayer()
         {
             _firstName = "bob";//string.Empty;//This is a constant for ""
-            _lastName = "smith";    
-            _birthPlace= "a";
-            _dateOfBirth= new DateOnly();
-            _weightInPounds=0;
-            _heightInInches=0;
+            _lastName = "smith";
+            _birthPlace = "a";
+            _dateOfBirth = new DateOnly();
+            _weightInPounds = 0;
+            _heightInInches = 0;
             Position = Position.Center;
             Shot = Shot.Right;
         }
-        public HockeyPlayer(string birthPlace, string firstName, string lastName, int heightInInches, int weightInPounds, DateOnly dateOfBirth,  Position position, Shot shot)
+        public HockeyPlayer(string birthPlace, string firstName, string lastName, int heightInInches, int weightInPounds, DateOnly dateOfBirth, Position position, Shot shot)
         {
             BirthPlace = birthPlace;
             FirstName = firstName;
             LastName = lastName;
             HeightInInches = heightInInches;
             WeightInPounds = weightInPounds;
-            DateOfBirth = dateOfBirth;            
+            DateOfBirth = dateOfBirth;
             Position = position;
             Shot = shot;
         }
+        //Override ToString to return firstname lastname
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}";
+        }
+
+
     }
 }
