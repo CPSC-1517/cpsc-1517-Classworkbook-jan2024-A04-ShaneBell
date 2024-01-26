@@ -1,0 +1,11 @@
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\bin\Debug\net7.0\InheritanceAndComposition.deps.json
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\bin\Debug\net7.0\InheritanceAndComposition.dll
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\bin\Debug\net7.0\InheritanceAndComposition.pdb
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\InheritanceAndComposition.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\InheritanceAndComposition.AssemblyInfoInputs.cache
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\InheritanceAndComposition.AssemblyInfo.cs
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\InheritanceAndComposition.csproj.CoreCompileInputs.cache
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\InheritanceAndComposition.dll
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\refint\InheritanceAndComposition.dll
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\InheritanceAndComposition.pdb
+C:\Users\sbell\source\repos\InheritanceAndComposition\InheritanceAndComposition\obj\Debug\net7.0\ref\InheritanceAndComposition.dll
