@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TeamTestConsole/1.0.0": {
+        "dependencies": {
+          "TeamInheritanceCompositionListEnumerationExercise": "1.0.0"
+        },
+        "runtime": {
+          "TeamTestConsole.dll": {}
+        }
+      },
+      "TeamInheritanceCompositionListEnumerationExercise/1.0.0": {
+        "runtime": {
+          "TeamInheritanceCompositionListEnumerationExercise.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TeamTestConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TeamInheritanceCompositionListEnumerationExercise/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

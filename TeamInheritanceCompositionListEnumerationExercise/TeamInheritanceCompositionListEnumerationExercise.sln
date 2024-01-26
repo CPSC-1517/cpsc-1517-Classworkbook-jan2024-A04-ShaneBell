@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamInheritanceCompositionListEnumerationExercise", "TeamInheritanceCompositionListEnumerationExercise\TeamInheritanceCompositionListEnumerationExercise.csproj", "{D061C6A9-52C4-4D21-AFFD-9D8F3CA86D00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamTestConsole", "TeamTestConsole\TeamTestConsole.csproj", "{30BB32B3-4B54-4F07-85A7-41160E9DBBC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D061C6A9-52C4-4D21-AFFD-9D8F3CA86D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D061C6A9-52C4-4D21-AFFD-9D8F3CA86D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D061C6A9-52C4-4D21-AFFD-9D8F3CA86D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D061C6A9-52C4-4D21-AFFD-9D8F3CA86D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BB32B3-4B54-4F07-85A7-41160E9DBBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BB32B3-4B54-4F07-85A7-41160E9DBBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BB32B3-4B54-4F07-85A7-41160E9DBBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BB32B3-4B54-4F07-85A7-41160E9DBBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EA3C1A4-DF63-464A-A747-92296CA4780C}
+	EndGlobalSection
+EndGlobal
