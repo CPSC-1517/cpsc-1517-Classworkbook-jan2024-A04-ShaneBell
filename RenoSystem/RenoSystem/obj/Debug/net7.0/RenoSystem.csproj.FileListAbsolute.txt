@@ -1,0 +1,11 @@
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\bin\Debug\net7.0\RenoSystem.deps.json
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\bin\Debug\net7.0\RenoSystem.dll
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\bin\Debug\net7.0\RenoSystem.pdb
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\RenoSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\RenoSystem.AssemblyInfoInputs.cache
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\RenoSystem.AssemblyInfo.cs
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\RenoSystem.csproj.CoreCompileInputs.cache
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\RenoSystem.dll
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\refint\RenoSystem.dll
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\RenoSystem.pdb
+C:\Users\sbell\Documents\ClassWorkBook\RenoSystem\RenoSystem\obj\Debug\net7.0\ref\RenoSystem.dll

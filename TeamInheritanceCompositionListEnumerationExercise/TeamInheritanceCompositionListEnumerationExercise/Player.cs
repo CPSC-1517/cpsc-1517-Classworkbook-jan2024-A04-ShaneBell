@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,10 @@ namespace TeamInheritanceCompositionListEnumerationExercise
             FirstName = firstName;
             LastName = lastName;
             JerseyNumber = jerseyNumber;
+        }
+        public override string ToString()
+        {
+            return $"{FirstName}, {LastName},{JerseyNumber}";
         }
     }
 }
