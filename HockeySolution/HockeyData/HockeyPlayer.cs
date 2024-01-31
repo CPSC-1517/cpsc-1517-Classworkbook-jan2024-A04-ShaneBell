@@ -1,4 +1,5 @@
-﻿using ValidationUtilities;
+﻿using HockeyData;
+using ValidationUtilities;
 
 namespace Hockey.Data
 {
@@ -24,7 +25,7 @@ namespace Hockey.Data
         //can validate
         //must have a get
         //set can be private (only code in the class can use it)
-
+        public List<Team> teams { get; set; } = new();
         public int JerseyNumber
         {
             get
@@ -189,6 +190,45 @@ namespace Hockey.Data
             return $"{FirstName} {LastName}";
         }
 
+        //Method to add a team to the player
+        //throw an exception if the team name is already in the list of teams for the player
+        public void AddTeam(string teamName, string city, Role role)
+        {
+            bool found = false;
+            foreach(Team aTeam in teams)
+            {
+                if(aTeam.TeamName==teamName)
+                {
+                    found = true;
+                }
+            }
+            if(found)
+            {
+                throw new Exception($"The {teamName} is already listed for that player");
+            }
+            
+            teams.Add(new Team(teamName, city, role));
+        }
+        //Remove Team method to remove a team from the list
+        //If the teamname being removed is not in the list, throw an exception
+        public void RemoveTeam(string teamName)
+        {
+            Team foundTeam = null;
+            bool found = false;
+            foreach (Team aTeam in teams)
+            {
+                if (aTeam.TeamName == teamName)
+                {
+                    found = true;                    
+                    foundTeam= aTeam;
+                }
+            }
+            if (!found)
+            {
+                throw new Exception($"The {teamName} is not in the list for that player");
+            }
+            teams.Remove(foundTeam);            
+        }
 
     }
 }

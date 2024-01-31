@@ -1,4 +1,6 @@
 ﻿using Hockey.Data;
+using HockeyData;
+
 namespace HockeyConsoleApp
 {
     internal class Program
@@ -21,6 +23,18 @@ namespace HockeyConsoleApp
             Console.WriteLine($"The players name is {player1.FirstName} {player1.LastName} and they were born on {player1.DateOfBirth}");
             Console.WriteLine($"The players name is {player2.FirstName} {player2.LastName} and they were born on {player2.DateOfBirth}");
             Console.WriteLine($"The players name is {player3.FirstName} {player3.LastName} and they were born on {player3.DateOfBirth}");
+            player3.AddTeam("Oilers", "Edmonton", Role.Player);
+            player3.AddTeam("Canucks", "Vancouver", Role.Coach);
+
+            foreach (Team aTeam in player3.teams)
+            {
+                Console.WriteLine(aTeam.ToString());
+            }
+            player3.RemoveTeam("Oilers");
+            foreach (Team aTeam in player3.teams)
+            {
+                Console.WriteLine(aTeam.ToString());
+            }
         }
     }
 }
