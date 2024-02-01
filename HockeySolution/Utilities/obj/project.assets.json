@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
       "projectName": "Utilities",
-      "projectPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
+      "projectPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
       "packagesPath": "C:\\Users\\sbell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\obj\\",
+      "outputPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

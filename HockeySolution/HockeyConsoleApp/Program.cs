@@ -1,5 +1,5 @@
 ﻿using Hockey.Data;
-using HockeyData;
+
 
 namespace HockeyConsoleApp
 {
@@ -15,7 +15,7 @@ namespace HockeyConsoleApp
                 FirstName = "Connor",
                 LastName = "McDavid"
             };
-            HockeyPlayer player3 = new HockeyPlayer("Edmonton", "Shane", "Bell", 80, 190, new DateOnly(1972, 1, 20), Position.Goalie, Shot.Right);
+            HockeyPlayer player3 = new HockeyPlayer("Edmonton", "Shane", "Bell", 80, 190, new DateOnly(1972, 1, 20), Position.Goalie, Shot.Right,40,null);
 
 
 
@@ -35,6 +35,9 @@ namespace HockeyConsoleApp
             {
                 Console.WriteLine(aTeam.ToString());
             }
+
+            
+
         }
     }
 }

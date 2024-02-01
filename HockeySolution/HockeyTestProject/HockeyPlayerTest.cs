@@ -17,11 +17,12 @@ namespace HockeyTestProject
         //can make it readonly to ensure it is not changed
         readonly DateOnly DATE_OF_BIRTH = new DateOnly(1972, 01, 20);
         const string TO_STRING_VALUE = $"{FIRST_NAME} {LAST_NAME}";
+        const int JERSEY_NUMBER = 20;
 
         //Method to generate a greedy Hockey Player
         public HockeyPlayer GenerateGreedyTestPlayer()
         {
-            return new HockeyPlayer(BIRTH_PLACE, FIRST_NAME, LAST_NAME, HEIGHT_IN_INCHES, WEIGHT_IN_POUNDS, DATE_OF_BIRTH, PLAYER_POSITION, PLAYER_SHOT);
+            return new HockeyPlayer(BIRTH_PLACE, FIRST_NAME, LAST_NAME, HEIGHT_IN_INCHES, WEIGHT_IN_POUNDS, DATE_OF_BIRTH, PLAYER_POSITION, PLAYER_SHOT, JERSEY_NUMBER, null);
         }
 
         //TEST FOR GREEDY CONSTRUCTOR
@@ -119,12 +120,69 @@ namespace HockeyTestProject
         {
             HockeyPlayer player = GenerateGreedyTestPlayer();
 
-            Action act=()=> player.JerseyNumber = value;
+            Action act = () => player.JerseyNumber = value;
 
             act.Should().Throw<Exception>().WithMessage("Jersey number out of range");
         }
 
+        [Fact]
+        public void Test_Creation_of_Greedy_Constructor_No_Teams()
+        {
+            //Arrange
 
 
+            //Act
+            HockeyPlayer player = new HockeyPlayer("Edmonton", "Shane", "Bell", 70, 190, new DateOnly(1972, 01, 20), Position.Goalie, Shot.Right, 1, null);
+
+            //Assert
+            player.Should().NotBeNull();//was it instantiated?
+            //Optional
+            player.FirstName.Should().Be("Shane");
+            player.LastName.Should().Be("Bell");
+            player.NumberOfTeams.Should().Be(0);
+            player.teams.Should().BeEmpty();
+        }
+
+        [Fact]
+        public void Test_Creation_of_Greedy_Constructor_With_Teams()
+        {
+            //Arrange
+            List<Team> teams = new List<Team>();
+            teams.Add(new Team("Oilers", "Edmonton", Role.Player));
+            teams.Add(new Team("Ooks", "Edmonton", Role.Player));
+            teams.Add(new Team("Canucks", "Vancouver", Role.Other));
+
+            //Act
+            HockeyPlayer player = new HockeyPlayer("Edmonton", "Shane", "Bell", 70, 190, new DateOnly(1972, 01, 20), Position.Goalie, Shot.Right, 1, teams);
+
+            //Assert
+            //Assert
+            player.Should().NotBeNull();//was it instantiated?
+            //Optional
+            player.FirstName.Should().Be("Shane");
+            player.LastName.Should().Be("Bell");
+            player.NumberOfTeams.Should().Be(3);
+            player.teams.Should().NotBeNull();
+
+
+        }
+        //Change Jersey Number test
+        //Create a player (team or no teams)
+        //change the jersey number
+        //Assert that the JerseyNumber property has the expected value
+
+        [Fact]
+        public void Test_Change_Jersey_Number()
+        {
+            //Arrange
+            HockeyPlayer player = new HockeyPlayer("Edmonton", "Shane", "Bell", 70, 190, new DateOnly(1972, 01, 20), Position.Goalie, Shot.Right, 1, null);
+            const int EXPECTED_VALUE = 20;
+
+            //Act
+            player.JerseyNumber=EXPECTED_VALUE;
+
+            //Assert
+            player.JerseyNumber.Should().Be(EXPECTED_VALUE);
+        }
     }
 }

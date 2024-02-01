@@ -1,4 +1,4 @@
-﻿using HockeyData;
+﻿
 using ValidationUtilities;
 
 namespace Hockey.Data
@@ -20,12 +20,20 @@ namespace Hockey.Data
         private DateOnly _dateOfBirth;
         private int _jerseyNumber;
 
+
         //Properties
         // allow acccess to our fields (public)
         //can validate
         //must have a get
         //set can be private (only code in the class can use it)
         public List<Team> teams { get; set; } = new();
+        public int NumberOfTeams
+        {
+            get
+            {
+                return teams.Count;
+            }
+        }
         public int JerseyNumber
         {
             get
@@ -172,8 +180,9 @@ namespace Hockey.Data
             _heightInInches = 0;
             Position = Position.Center;
             Shot = Shot.Right;
+            JerseyNumber = 20;
         }
-        public HockeyPlayer(string birthPlace, string firstName, string lastName, int heightInInches, int weightInPounds, DateOnly dateOfBirth, Position position, Shot shot)
+        public HockeyPlayer(string birthPlace, string firstName, string lastName, int heightInInches, int weightInPounds, DateOnly dateOfBirth, Position position, Shot shot, int jerseyNumber,List<Team> team)
         {
             BirthPlace = birthPlace;
             FirstName = firstName;
@@ -183,6 +192,13 @@ namespace Hockey.Data
             DateOfBirth = dateOfBirth;
             Position = position;
             Shot = shot;
+            JerseyNumber = jerseyNumber;
+            if (team != null)
+            {
+                teams = team;
+            }
+            
+
         }
         //Override ToString to return firstname lastname
         public override string ToString()

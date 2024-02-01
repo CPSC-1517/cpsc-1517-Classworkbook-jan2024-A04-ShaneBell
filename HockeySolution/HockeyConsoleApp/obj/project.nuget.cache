@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zyb3vTCulmOcVpbtBvSHx71yeIHM+U6t4eCSBL7UorzwgRZICcOqnYDJK+2Cu4CgGyB6rCJBlRtm5WgffeLHVw==",
+  "dgSpecHash": "8nqqWJhTVYsWrIYDr6CaGqkb62X9+XvHiy7qAbVNdZWKmhTZvkJTkz+2Ubi7Ul+8ykqddmddWdCaLULm0HqulQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyConsoleApp\\HockeyConsoleApp.csproj",
+  "projectFilePath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyConsoleApp\\HockeyConsoleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sbell\\.nuget\\packages\\fluentassertions\\6.12.0\\fluentassertions.6.12.0.nupkg.sha512",
     "C:\\Users\\sbell\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
