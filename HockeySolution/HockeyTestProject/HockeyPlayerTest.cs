@@ -179,10 +179,82 @@ namespace HockeyTestProject
             const int EXPECTED_VALUE = 20;
 
             //Act
-            player.JerseyNumber=EXPECTED_VALUE;
+            player.JerseyNumber = EXPECTED_VALUE;
 
             //Assert
             player.JerseyNumber.Should().Be(EXPECTED_VALUE);
         }
+        [Fact]
+        public void Add_First_Team()
+        {
+            //Arrange
+            Team firstTeam = new Team("Oilers", "Edmonton", Role.Other);
+
+            List<Team> expectedTeams = new List<Team>()
+            {
+                firstTeam
+            };
+            //expectedTeams.Add(firstTeam);
+            HockeyPlayer player = new HockeyPlayer("Edmonton", "Shane", "Bell", 70, 190, new DateOnly(1972, 01, 20), Position.Goalie, Shot.Right, 1, null);
+            //Act
+            player.AddTeam(firstTeam);
+
+            //Assert
+            player.NumberOfTeams.Should().Be(1);
+            player.teams.Should().ContainInConsecutiveOrder(expectedTeams);
+        }
+        [Fact]
+        public void Add_Additional_Teams_To_Collection()
+        {
+            //Arrange
+            Team team1 = new Team("Oilers", "Edmonton", Role.Other);
+            Team team2 = new Team("Ooks", "Edmonton", Role.Other);
+            Team team3 = new Team("Canucks", "Edmonton", Role.Other);
+            Team additionalTeam = new Team("SQL  Warriors", "Edmonton", Role.Other);
+
+            List<Team> expectedTeams = new List<Team>()
+            {
+                team1,
+                team2,
+                team3,
+                additionalTeam
+            };
+
+            List<Team> teams = new List<Team>()
+            {
+                team1,
+                team2,
+                team3
+            };
+
+            HockeyPlayer player = new HockeyPlayer("Edmonton", "Shane", "Bell", 70, 190, new DateOnly(1972, 01, 20), Position.Goalie, Shot.Right, 1, teams);
+
+            //Act
+            player.AddTeam(additionalTeam);
+
+            //Assert
+            player.NumberOfTeams.Should().Be(4);
+            player.teams.Should().ContainInConsecutiveOrder(expectedTeams);
+
+        }
+        [Fact]
+        public void Throw_Missing_Team_Exception()
+        {
+            //Arrange
+            HockeyPlayer player = new HockeyPlayer("Edmonton", "Shane", "Bell", 70, 190, new DateOnly(1972, 01, 20), Position.Goalie, Shot.Right, 1, null);
+
+            //Act
+            Action action = () => player.AddTeam(null);
+
+            //Assert
+            action.Should().Throw<Exception>().WithMessage("*not provided*");
+            player.NumberOfTeams.Should().Be(0);
+            player.teams.Should().BeEmpty();
+        }
+        //Remove Team success
+
+
+
+
     }
 }

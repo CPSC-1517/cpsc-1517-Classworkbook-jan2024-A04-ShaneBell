@@ -208,6 +208,9 @@ namespace Hockey.Data
 
         //Method to add a team to the player
         //throw an exception if the team name is already in the list of teams for the player
+
+        //Overload the AddTeam Method to accept a team object
+        //same functionality as the first AddTeam method
         public void AddTeam(string teamName, string city, Role role)
         {
             bool found = false;
@@ -225,10 +228,38 @@ namespace Hockey.Data
             
             teams.Add(new Team(teamName, city, role));
         }
+        //Overload of AddTeam Method
+        public void AddTeam(Team team)
+        {
+            //Was a team passed to the method?
+            if (team == null)
+            {
+                throw new Exception("A team was not provided");
+            }
+            bool found = false;
+            foreach (Team aTeam in teams)
+            {
+                if (aTeam.TeamName == team.TeamName)
+                {
+                    found = true;
+                }
+            }
+            if (found)
+            {
+                throw new Exception($"The {team.TeamName} is already listed for that player");
+            }
+
+            teams.Add(team);
+        }
+
         //Remove Team method to remove a team from the list
         //If the teamname being removed is not in the list, throw an exception
         public void RemoveTeam(string teamName)
         {
+            if (string.IsNullOrWhiteSpace(teamName))
+            {
+                throw new Exception("Team name is required");
+            }
             Team foundTeam = null;
             bool found = false;
             foreach (Team aTeam in teams)
