@@ -1,0 +1,14 @@
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\bin\Debug\net7.0\Linq.exe
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\bin\Debug\net7.0\Linq.deps.json
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\bin\Debug\net7.0\Linq.runtimeconfig.json
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\bin\Debug\net7.0\Linq.dll
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\bin\Debug\net7.0\Linq.pdb
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\Linq.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\Linq.AssemblyInfoInputs.cache
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\Linq.AssemblyInfo.cs
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\Linq.csproj.CoreCompileInputs.cache
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\Linq.dll
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\refint\Linq.dll
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\Linq.pdb
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\Linq.genruntimeconfig.cache
+C:\Users\sbell\Documents\WorkBook\Linq\Linq\obj\Debug\net7.0\ref\Linq.dll
