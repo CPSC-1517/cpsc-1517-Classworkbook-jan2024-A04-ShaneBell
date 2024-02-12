@@ -1,0 +1,19 @@
+﻿@page "/counter"
+@* @page directive is used in the URL to locate the page on the server. The filename is not used. *@
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+@*The @ symbol on @currentCount is how we access the C# variable in the C# block. At this point of the markup display that variable*@
+<p role="status">Current count: @currentCount</p>
+@*When the variable changes, the portions of the page using the variable are re-rendered to show the new value.*@
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+@*The @code block is where we can write C# code to work with this component/page*@
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

@@ -1,0 +1,42 @@
+﻿@page "/Samples/random-number"
+@* @rendermode InteractiveServer *@
+<h3>MaxRandomNumber</h3>
+
+<p>This page will render a random number between 1 and a max number</p>
+
+<div class="alert alert-info">
+    <p>@FeedbackString</p>
+
+</div>
+
+<fieldset>
+    <div>
+    <label for="max-number">Max Number Value</label>
+    <input type="text" id="max-number" name="maxNumber" @bind="MaxNumber"/>    
+    </div>
+    <div>
+        <button class="btn btn-primary" @onclick="GenerateRandomNumber">Generate Number</button>
+    </div>
+
+
+</fieldset>
+
+@code {
+    private int MaxNumber { get; set; }
+    private int RandomNumber { get; set; }
+    private string? FeedbackString { get; set; }
+
+    private void GenerateRandomNumber()
+    {
+        RandomNumber = Random.Shared.Next(1, MaxNumber + 1);
+        FeedbackString = $"Your random number is {RandomNumber}";
+    }
+
+
+
+
+
+
+
+
+}
