@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "RenoSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/RenoSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RenoSystem.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RenoSystem/1.0.0": {
+      "type": "project",
+      "path": "../RenoSystem/RenoSystem.csproj",
+      "msbuildProject": "../RenoSystem/RenoSystem.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "RenoSystem >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\sbell\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\sbell\\Downloads\\RenoSystemSolutionEx2\\RenoSystemSolutionEx2\\RenoUnitTestsEx1\\RenoUnitTestsEx1.csproj",
+      "projectName": "RenoUnitTestsEx1",
+      "projectPath": "C:\\Users\\sbell\\Downloads\\RenoSystemSolutionEx2\\RenoSystemSolutionEx2\\RenoUnitTestsEx1\\RenoUnitTestsEx1.csproj",
+      "packagesPath": "C:\\Users\\sbell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sbell\\Downloads\\RenoSystemSolutionEx2\\RenoSystemSolutionEx2\\RenoUnitTestsEx1\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\sbell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\sbell\\Downloads\\RenoSystemSolutionEx2\\RenoSystemSolutionEx2\\RenoSystem\\RenoSystem.csproj": {
+              "projectPath": "C:\\Users\\sbell\\Downloads\\RenoSystemSolutionEx2\\RenoSystemSolutionEx2\\RenoSystem\\RenoSystem.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
