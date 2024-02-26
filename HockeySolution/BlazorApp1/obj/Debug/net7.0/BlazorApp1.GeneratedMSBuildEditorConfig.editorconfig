@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/Calculator.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xDYWxjdWxhdG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/MaxRandomNumber.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xNYXhSYW5kb21OdW1iZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
