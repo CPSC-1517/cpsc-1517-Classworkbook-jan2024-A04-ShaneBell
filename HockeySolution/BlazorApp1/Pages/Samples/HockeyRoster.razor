@@ -1,0 +1,71 @@
+﻿@page "/hockeyroster"
+<h3>HockeyRoster</h3>
+@using Hockey.Data
+
+<table class="table table-striped">
+<thead>
+   <tr>
+       <th>BirthPlace</th>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>DOB</th>
+            <th>Position</th>
+            <th>Shot</th>
+            <th>JerseyNumber</th>
+   </tr>
+</thead>
+<tbody>
+    @foreach(HockeyPlayer aPlayer in Players)
+    {
+    <tr>
+        <td>@aPlayer.BirthPlace</td>
+                <td>@aPlayer.FirstName @aPlayer.LastName</td>      
+                <td>@aPlayer.HeightInInches</td>
+                <td>@aPlayer.WeightInPounds</td>
+                <td>@aPlayer.DateOfBirth</td>
+                <td>@aPlayer.Position</td>
+                <td>@aPlayer.Shot</td>
+                <td>@aPlayer.JerseyNumber</td>
+    </tr>
+    }
+</tbody>
+</table>
+@code {
+    private List<HockeyPlayer> Players { get; set; }
+    string csvFilePath = @"./Data/players.csv";
+    string csvFilePathNoHeader = @"./Data/playersNoHeader.csv";
+
+    protected override Task OnInitializedAsync()
+    {
+        Players = new();
+        // using(StreamReader reader = new StreamReader(csvFilePath))
+        // {
+        //     //Skip the header record
+        //     reader.ReadLine();
+        //     string? currentLine;
+
+        //     while((currentLine=reader.ReadLine())!=null)
+        //     {
+        //         Players.Add(HockeyPlayer.Parse(currentLine));
+        //     }            
+        // }
+        //OR
+        string[] userdata;
+        userdata = System.IO.File.ReadAllLines(csvFilePathNoHeader);
+
+        foreach(string line in userdata)
+        {
+            {
+                Players.Add(HockeyPlayer.Parse(line));
+            }
+        }
+
+
+    return base.OnInitializedAsync();
+    }
+    
+
+
+
+}

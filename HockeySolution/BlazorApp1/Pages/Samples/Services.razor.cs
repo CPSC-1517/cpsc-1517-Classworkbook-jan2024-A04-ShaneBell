@@ -19,7 +19,10 @@
         public Dictionary<string, string> ErrorList { get; set; } = new();
         public void DisplayData()
         {
-            if(string.IsNullOrWhiteSpace(ContactName)) 
+            Success = false;
+
+            ErrorList.Clear();
+            if (string.IsNullOrWhiteSpace(ContactName))
             {
                 ErrorList.Add("contact_name", "Contact name is required");
             }
@@ -28,8 +31,10 @@
                 ErrorList.Add("phone_number", "Phone number is required");
             }
 
-            Success = true;
-            Output = $@"<strong>Contact Name:</strong> {ContactName},
+            if (ErrorList.Count == 0)
+            {
+                Success = true;
+                Output = $@"<strong>Contact Name:</strong> {ContactName},
         <strong>Phone Number:</strong> {PhoneNumber}
          <strong>Years as Customer:</strong> {YearsAsCustomer}
          <strong>CurrentCustomer:</strong> {IsCurrentCustomer}
@@ -37,14 +42,15 @@
         <strong>Reason:</strong>  {Reason}
         <strong>Request Information:</strong>  {RequestInformation}";
 
-            //Reset the controls(by initializing the properties)
-            PhoneNumber = "";
-            ContactName = "";
-            YearsAsCustomer = 0;
-            IsCurrentCustomer = false;
-            ServiceType = null;
-            Reason = "";
-            RequestInformation = "";
+                //Reset the controls(by initializing the properties)
+                PhoneNumber = "";
+                ContactName = "";
+                YearsAsCustomer = 0;
+                IsCurrentCustomer = false;
+                ServiceType = null;
+                Reason = "";
+                RequestInformation = "";
+            }
         }
     }
 }

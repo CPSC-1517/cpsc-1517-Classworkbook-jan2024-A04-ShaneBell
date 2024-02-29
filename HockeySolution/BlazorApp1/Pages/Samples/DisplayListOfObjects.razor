@@ -1,0 +1,43 @@
+﻿@page "/DisplayListOfObjects"
+@using BlazorApp1.Data
+<h3>DisplayListOfObjects</h3>
+
+@if (Movies.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Movie aMovie in Movies)
+            {
+                <tr>
+                    <td>@aMovie.MovieName</td>
+                    <td>@aMovie.Description</td>
+                    <td>@aMovie.Rating</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Movie> Movies { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        Movies = new();
+        // Movies.Add(new Movie("Star Wars", "good Show", 5));
+        // Movies.Add(new Movie("Star Wars2", "gooder Show", 5));
+        // Movies.Add(new Movie("Star Wars3", "goodest Show", 5));
+        // Movies.Add(new Movie("Star Wars4", "goodToInfinity Show", 5));
+        return base.OnInitializedAsync();
+    }
+
+
+
+}

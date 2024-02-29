@@ -276,6 +276,31 @@ namespace Hockey.Data
             }
             teams.Remove(foundTeam);            
         }
+        public static HockeyPlayer Parse(string line)
+        {
+            HockeyPlayer player;
+            if (Utilities.IsNullOrEmptyOrWhiteSpace(line))
+            {
+                throw new Exception("Line cannot be empty");
+            }
+            //Split the csv into the array
+            string[] fields = line.Split(',');
+            if (fields.Length != 9)
+            {
+                throw new Exception("Incorrect Number of fields");
+            }
+            try
+            {
+                //if not using JAN (use 01) we dont need the invariant bit....
+                //MMM means abreviated month name. Must be capital. lowercase is for minutes
+                player = new HockeyPlayer(fields[0], fields[1], fields[2], int.Parse(fields[3]), int.Parse(fields[4]), DateOnly.ParseExact(fields[5], "MM-dd-yyyy"), Enum.Parse<Position>(fields[6]), Enum.Parse<Shot>(fields[7]), int.Parse(fields[8]), null);
+            }
+            catch
+            {
+                throw new Exception("Error while creaing the object");
+            }
+            return player;
+        }
 
     }
 }

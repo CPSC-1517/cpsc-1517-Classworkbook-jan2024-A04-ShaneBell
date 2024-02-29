@@ -9,61 +9,69 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlazorApp1
 build_property.RootNamespace = BlazorApp1
-build_property.ProjectDir = C:\Users\sbell\Documents\ClassWorkBook\HockeySolution\BlazorApp1\
+build_property.ProjectDir = C:\Users\sbell\Documents\WorkBook\HockeySolution\BlazorApp1\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\sbell\Documents\ClassWorkBook\HockeySolution\BlazorApp1
+build_property.MSBuildProjectDirectory = C:\Users\sbell\Documents\WorkBook\HockeySolution\BlazorApp1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/App.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Counter.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/FetchData.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Index.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/Calculator.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Samples/Calculator.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xDYWxjdWxhdG9yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/MaxRandomNumber.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Samples/DisplayListOfObjects.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xEaXNwbGF5TGlzdE9mT2JqZWN0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Samples/HockeyRoster.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xIb2NrZXlSb3N0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Samples/MaxRandomNumber.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xNYXhSYW5kb21OdW1iZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/Services.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Samples/Services.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xTZXJ2aWNlcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Shared/SurveyPrompt.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/_Imports.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Shared/MainLayout.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-45rkf8v3vv
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Shared/NavMenu.razor]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-b5wscdn8ts
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Error.cshtml]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/_Host.cshtml]
+[C:/Users/sbell/Documents/WorkBook/HockeySolution/BlazorApp1/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
