@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj": {}
+    "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj": {
+    "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
+        "projectUniqueName": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
         "projectName": "HockeyData",
-        "projectPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
+        "projectPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj",
         "packagesPath": "C:\\Users\\sbell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyData\\obj\\",
+        "outputPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\Utilities.csproj"
+              "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj": {
+    "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj",
+        "projectUniqueName": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj",
         "projectName": "HockeyTestProject",
-        "projectPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj",
+        "projectPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyTestProject\\HockeyTestProject.csproj",
         "packagesPath": "C:\\Users\\sbell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyTestProject\\obj\\",
+        "outputPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -101,8 +101,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj": {
-                "projectPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj"
+              "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj": {
+                "projectPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\HockeyData\\HockeyData.csproj"
               }
             }
           }
@@ -158,14 +158,14 @@
         }
       }
     },
-    "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\Utilities.csproj": {
+    "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
-        "projectPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
+        "projectPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\Utilities.csproj",
         "packagesPath": "C:\\Users\\sbell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\Utilities\\obj\\",
+        "outputPath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

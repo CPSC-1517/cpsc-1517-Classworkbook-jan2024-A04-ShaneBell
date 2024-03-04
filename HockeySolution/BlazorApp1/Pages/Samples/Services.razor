@@ -1,5 +1,5 @@
 ﻿@page "/service"
-
+@using BlazorApp1.Data
 <h3>Services</h3>
 @* Customer Information Section *@
 <fieldset class="form-group card p-3 mb-3">
@@ -72,6 +72,15 @@
     </div>
     <div class="mb-3">
         <button class="btn btn-primary" @onclick="DisplayData">Submit Request</button>
+        <button class="btn btn-primary" @onclick="AddToList">Add To List</button>
+        <button class="btn btn-primary" @onclick="ClearList">Clear the List</button>
+        <button class="btn btn-primary" @onclick="SaveToFile">Save To File</button>
+        <button class="btn btn-primary" @onclick="ReadFromFile">Read From File</button>
+        <button class="btn btn-primary" @onclick="DisplayRequests">Display Requests</button>
+        @* Empty the list
+        Read from the file
+        parse the file
+        add the object to the list *@
     </div>
     @if (Success)
     {
@@ -80,8 +89,11 @@
             <p>@((MarkupString)@Output)</p>
         </div>
     }
-
 </fieldset>
+
+
+
+
 @code {
 
     }

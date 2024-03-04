@@ -1,4 +1,6 @@
-﻿namespace BlazorApp1.Pages.Samples
+﻿using BlazorApp1.Data;
+ 
+namespace BlazorApp1.Pages.Samples
 {
     public partial class Services
     {
@@ -15,8 +17,14 @@
 
         private bool Success { get; set; } = false;
 
+        private bool ShowReport { get; set; } = false;
+
         //Instantiate a new dictionary property
         public Dictionary<string, string> ErrorList { get; set; } = new();
+
+        public List<ServiceRequest> ServiceRequests { get; set; } = new();
+
+        string csvFilePath = @".\Data\Requests.csv";
         public void DisplayData()
         {
             Success = false;
@@ -50,6 +58,46 @@
                 ServiceType = null;
                 Reason = "";
                 RequestInformation = "";
+            }
+        }
+        public void AddToList()
+        {
+            //Add a new service request object to the list
+            ServiceRequests.Add(new ServiceRequest(ContactName, PhoneNumber, YearsAsCustomer, IsCurrentCustomer, ServiceType, Reason, RequestInformation));
+        }
+        public void ClearList()
+        {
+            ServiceRequests.Clear();
+        }
+        public void SaveToFile()
+        {
+            using (StreamWriter writer = new StreamWriter(csvFilePath,true)) 
+            {
+            foreach (ServiceRequest aRequest in ServiceRequests) 
+                {
+                writer.WriteLine(aRequest.ToString());
+                }
+            }
+        }
+        public void ReadFromFile()
+        {
+            //Empty the list before loading the file contents
+            ServiceRequests.Clear();
+            //Array to hold the csv records
+            //Each element holds one line of the file 
+            string[] userData;
+            userData=System.IO.File.ReadAllLines(csvFilePath);
+            //Loop through the array and parse each line and add to the list
+            foreach(string line in userData) 
+            {
+            ServiceRequests.Add(ServiceRequest.Parse(line));
+            }
+        }
+        public void DisplayRequests()
+        {
+            if (ServiceRequests.Count > 0)
+            {
+                ShowReport = true;
             }
         }
     }

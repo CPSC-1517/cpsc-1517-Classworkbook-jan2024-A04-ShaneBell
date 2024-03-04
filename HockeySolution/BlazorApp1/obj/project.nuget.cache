@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pu26YmseQ6yZNbFHdc0ycvD+VKidJbpXX3qYBOjMLDaG6OxF3yxJODJqniTY2EsRtU1gGfGV0L+RyUWVwA6HZw==",
+  "dgSpecHash": "x5GBSZ76tBufhpZ35emm3QDTTUPBVoulfN+AkSn2LZ47Fn1mn1Bu95V8vGFHC6Ey09pUyagzXFMInncmoGHtHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sbell\\Documents\\WorkBook\\HockeySolution\\BlazorApp1\\BlazorApp1.csproj",
+  "projectFilePath": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\BlazorApp1\\BlazorApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sbell\\.nuget\\packages\\fluentassertions\\6.12.0\\fluentassertions.6.12.0.nupkg.sha512",
     "C:\\Users\\sbell\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",

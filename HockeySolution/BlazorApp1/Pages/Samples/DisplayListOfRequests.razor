@@ -1,0 +1,38 @@
+﻿@page "/DisplayRequets"
+@using BlazorApp1.Data
+<h3>DisplayListOfRequests</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Years as Customer</th>
+            <th>Is Current Customer</th>
+            <th>Service Type</th>
+            <th>Reason</th>
+            <th>Service Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (ServiceRequest aRequest in ServiceRequests)
+        {
+            <tr>
+                <td>@aRequest.ContactName</td>
+                <td>@aRequest.PhoneNumber</td>
+                <td>@aRequest.YearsAsCustomer</td>
+                <td>@aRequest.IsCurrentCustomer</td>
+                <td>@aRequest.ServiceType</td>
+                <td>@aRequest.Reason</td>
+                <td>@aRequest.RequestInformation</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+
+@code {
+
+}
