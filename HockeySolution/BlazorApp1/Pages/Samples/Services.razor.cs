@@ -95,6 +95,10 @@ namespace BlazorApp1.Pages.Samples
         }
         public void DisplayRequests()
         {
+            if (ServiceRequests.Count==0)
+            {
+                ErrorList.Add("empty_list", "The list is empty");
+            }
             if (ServiceRequests.Count > 0)
             {
                 ShowReport = true;

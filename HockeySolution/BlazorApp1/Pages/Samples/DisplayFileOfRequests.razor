@@ -1,6 +1,6 @@
-﻿@page "/DisplayRequets"
+﻿@page "/DisplayFileOfRequests"
 @using BlazorApp1.Data
-<h3>DisplayListOfRequests</h3>
+<h3>DisplayFileOfRequests</h3>
 
 <table class="table table-striped">
     <thead>
@@ -32,7 +32,22 @@
 </table>
 
 
-
 @code {
+    private List<ServiceRequest> ServiceRequests { get; set; } = new();
+
+    protected override Task OnInitializedAsync()
+    {
+        string csvFilePath = @".\Data\Requests.csv";
+
+        Array userData;
+        userData = System.IO.File.ReadAllLines(csvFilePath);
+
+        foreach(string line in userData)
+        {
+            ServiceRequests.Add(ServiceRequest.Parse(line));
+        }
+        return base.OnInitializedAsync();
+    }
+
 
 }

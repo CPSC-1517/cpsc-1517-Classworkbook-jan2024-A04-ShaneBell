@@ -77,6 +77,10 @@
         <button class="btn btn-primary" @onclick="SaveToFile">Save To File</button>
         <button class="btn btn-primary" @onclick="ReadFromFile">Read From File</button>
         <button class="btn btn-primary" @onclick="DisplayRequests">Display Requests</button>
+        <button type = "submit" class="btn btn-danger">
+        <NavLink href="DisplayFileOfRequests">Display file contents</NavLink>
+        </button>
+
         @* Empty the list
         Read from the file
         parse the file
@@ -91,7 +95,45 @@
     }
 </fieldset>
 
+@if (ErrorList.ContainsKey("empty_list"))
+{
+    <div class="alert alert-danger mt-3">
+        @ErrorList["empty_list"];
+    </div>
+}
 
+
+@if (ShowReport)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Years as Customer</th>
+                <th>Is Current Customer</th>
+                <th>Service Type</th>
+                <th>Reason</th>
+                <th>Service Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ServiceRequest aRequest in ServiceRequests)
+            {
+                <tr>
+                    <td>@aRequest.ContactName</td>
+                    <td>@aRequest.PhoneNumber</td>
+                    <td>@aRequest.YearsAsCustomer</td>
+                    <td>@aRequest.IsCurrentCustomer</td>
+                    <td>@aRequest.ServiceType</td>
+                    <td>@aRequest.Reason</td>
+                    <td>@aRequest.RequestInformation</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
 
 
 @code {

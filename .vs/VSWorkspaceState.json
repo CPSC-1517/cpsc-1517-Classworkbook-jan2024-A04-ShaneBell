@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\HockeySolution",
+    "\\HockeySolution\\BlazorApp1",
+    "\\HockeySolution\\BlazorApp1\\Pages",
+    "\\HockeySolution\\BlazorApp1\\Pages\\Samples"
   ],
-  "SelectedNode": "\\HockeySolution.sln",
+  "SelectedNode": "\\HockeySolution\\BlazorApp1\\Pages\\Samples\\Services.razor",
   "PreviewInSolutionExplorer": false
 }

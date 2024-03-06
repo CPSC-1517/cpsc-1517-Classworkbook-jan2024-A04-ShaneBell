@@ -36,12 +36,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xDYWxjdWxhdG9yLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/DisplayListOfObjects.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xEaXNwbGF5TGlzdE9mT2JqZWN0cy5yYXpvcg==
+[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/DisplayFileOfRequests.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xEaXNwbGF5RmlsZU9mUmVxdWVzdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/DisplayListOfRequests.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xEaXNwbGF5TGlzdE9mUmVxdWVzdHMucmF6b3I=
+[C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/DisplayListOfObjects.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FtcGxlc1xEaXNwbGF5TGlzdE9mT2JqZWN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/sbell/Documents/ClassWorkBook/HockeySolution/BlazorApp1/Pages/Samples/HockeyRoster.razor]
