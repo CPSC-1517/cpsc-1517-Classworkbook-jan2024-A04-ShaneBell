@@ -23,6 +23,7 @@ namespace BlazorApp1.Pages.Samples
         public Dictionary<string, string> ErrorList { get; set; } = new();
 
         public List<ServiceRequest> ServiceRequests { get; set; } = new();
+        private string? Color { get; set; }
 
         string csvFilePath = @".\Data\Requests.csv";
         public void DisplayData()
@@ -103,6 +104,11 @@ namespace BlazorApp1.Pages.Samples
             {
                 ShowReport = true;
             }
+        }
+        protected override void OnInitialized()
+        {
+            Color = "#ffffff";
+            base.OnInitialized();
         }
     }
 }

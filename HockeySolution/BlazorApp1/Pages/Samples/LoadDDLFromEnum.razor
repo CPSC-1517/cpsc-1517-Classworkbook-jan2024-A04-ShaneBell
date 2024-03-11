@@ -1,0 +1,23 @@
+﻿@page "/LoadDDL"
+@using Hockey.Data
+<h3>LoadDDLFromEnum</h3>
+<select @bind="Position">
+    <option value="">Choose a position</option>
+    @foreach (Position aPosition in Enum.GetValues(typeof(Position)))
+    {
+       <option value="@aPosition">@aPosition</option> 
+    }
+</select>
+<button @onclick="DisplayPosition">Display the position</button>
+
+<p>@Output</p>
+
+@code {
+    public string Position { get; set; }
+    public string Output { get; set; }
+
+    public void DisplayPosition()
+    {
+        Output = Position;
+    }
+}

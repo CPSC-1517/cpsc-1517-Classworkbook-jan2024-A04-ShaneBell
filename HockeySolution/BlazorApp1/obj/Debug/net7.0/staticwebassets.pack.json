@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\BlazorApp1\\wwwroot\\images\\yoda.jpg",
+      "PackagePath": "staticwebassets\\images\\yoda.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorApp1.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

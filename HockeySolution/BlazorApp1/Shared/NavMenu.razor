@@ -1,6 +1,8 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">BlazorApp1</a>
+        <a class="navbar-brand" href="">
+            <img src="images/yoda.jpg" style="width:30px" alt="yoda" /> BlazorApp1
+            </a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,6 +45,12 @@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="hockeyroster">
                 Hockey Roster
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="LoadDDL">
+                Load DDL from Enum
             </NavLink>
         </div>
 

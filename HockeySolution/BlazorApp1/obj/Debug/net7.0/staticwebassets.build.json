@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/1MOroku7ZL1Jf+QBXOs2/2/uzQHjjaLsnS5+Bg1rM0=",
+  "Hash": "GYLAGkdn/UnHZ0I1QaIxjo1lulMp4/E14eYsb/kRITA=",
   "Source": "BlazorApp1",
   "BasePath": "_content/BlazorApp1",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\BlazorApp1\\wwwroot\\images\\yoda.jpg",
+      "SourceId": "BlazorApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\sbell\\Documents\\ClassWorkBook\\HockeySolution\\BlazorApp1\\wwwroot\\",
+      "BasePath": "_content/BlazorApp1",
+      "RelativePath": "images/yoda.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\yoda.jpg"
     }
   ]
 }
