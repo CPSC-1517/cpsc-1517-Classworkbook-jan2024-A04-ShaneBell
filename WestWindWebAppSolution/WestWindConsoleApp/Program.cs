@@ -19,6 +19,29 @@ foreach(Customer aCustomer in customerServices.GetAllCustomers())
     Console.WriteLine(aCustomer.ContactName);
 }
 
+CategoryServices categoryServices = new CategoryServices(context);
+foreach (Category aCategory in categoryServices.GetAllCategories())
+{
+    Console.WriteLine(aCategory.CategoryName);
+}
+
+//List all the customers contact names in a unordered list in a web app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Customer customer2 = customerServices.GetCustomerById("ALfki");
 
 Console.WriteLine($"ALFKI is {customer2.ContactName}");
