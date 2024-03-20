@@ -1,0 +1,38 @@
+﻿@page "/AllCustomers"
+
+@using WestWindSystem.DAL
+@using WestWindSystem.BLL
+@using WestWindSystem.Entities
+
+<h3>AllCustomerContactNames</h3>
+
+<ul>
+    @foreach (Customer aCustomer in customerServices.GetAllCustomers())
+    {
+    <li>
+        @aCustomer.ContactName
+    </li>
+    }
+</ul>
+
+@code {
+    List<Customer> CustomerList = new();
+    //Instantiate a customerServices Object and pass in the context of where the data is.
+    CustomerServices customerServices;
+
+    protected override void OnInitialized()
+    {
+        WestWindContext context = new WestWindContext();
+
+        //Instantiate a customerServices Object and pass in the context of where the data is.
+        customerServices = new CustomerServices(context);
+
+        //Display all the customers contactNames
+
+        CustomerList = customerServices.GetAllCustomers();
+
+        base.OnInitialized();
+    }
+
+
+}

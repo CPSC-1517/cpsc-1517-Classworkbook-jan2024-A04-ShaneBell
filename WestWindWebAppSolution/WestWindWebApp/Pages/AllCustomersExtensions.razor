@@ -1,0 +1,27 @@
+﻿@page "/AllCustomersExtensions"
+<h3>AllCustomersExtensions</h3>
+@using WestWindSystem.BLL
+@using WestWindSystem.Entities
+
+<ul>
+    @foreach (Customer aCustomer in Customers)
+    {
+        <li>
+            @aCustomer.ContactName
+        </li>
+    }
+</ul>
+
+
+@code {
+    [Inject]
+    public CustomerServices customerServices { get; set; }
+    public List<Customer> Customers { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Customers = customerServices.GetAllCustomers();
+        base.OnInitialized();
+    }
+
+}
