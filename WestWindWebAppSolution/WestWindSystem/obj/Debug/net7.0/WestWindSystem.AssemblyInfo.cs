@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WestWindSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a80aa7cf759984e30f99ef73c3012ff4e6d5bbb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("WestWindSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WestWindSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

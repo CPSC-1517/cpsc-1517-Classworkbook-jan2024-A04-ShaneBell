@@ -1,0 +1,42 @@
+﻿@page "/lookupregion"
+
+@using WestWindSystem.BLL
+@using WestWindSystem.Entities
+
+<h3>LookUpRegion</h3>
+@* Create the form and the button and display the region info when the button is clicked *@
+<div class="mb-3">
+    <label class="form-label" for="regionid">Search Region ID</label>
+    <input class="form-control" type="text" id="regionid" @bind="RegionID" />
+    <button class="btn btn-primary" @onclick="DisplayRegion">Display Region</button>
+</div>
+@if (Region !=null)
+{
+<div class="mb-3">
+<p>RegionID: @RegionID</p>
+<p>Region Description: @Region.RegionDescription</p>
+</div>
+}
+
+@code {
+    [Inject]
+    public RegionServices regionServices { get; set; }
+
+    private int RegionID { get; set; }//Property to hold the search criteria from the text box
+    private Region? Region { get; set; }
+    private int test;
+
+    public void DisplayRegion()
+    {
+        //Pass the value from the text box(RegionID property) to the lookup method
+        Region = regionServices.LookupRegionByID(RegionID);
+    }
+
+    //EXERCISE
+    //Create a DDL showing all the region descriptions
+    //Have a button to show the region information that has been chossen in the DDL(from theDB)
+    //Display a message if no region has been selected from the DDL (Have a prompt). Use a dictionary
+
+
+
+}

@@ -10,3 +10,4 @@ C:\Users\sbell\Documents\ClassWorkBook\WestWindWebAppSolution\WestWindSystem\obj
 C:\Users\sbell\Documents\ClassWorkBook\WestWindWebAppSolution\WestWindSystem\obj\Debug\net7.0\refint\WestWindSystem.dll
 C:\Users\sbell\Documents\ClassWorkBook\WestWindWebAppSolution\WestWindSystem\obj\Debug\net7.0\WestWindSystem.pdb
 C:\Users\sbell\Documents\ClassWorkBook\WestWindWebAppSolution\WestWindSystem\obj\Debug\net7.0\ref\WestWindSystem.dll
+C:\Users\sbell\Documents\ClassWorkBook\WestWindWebAppSolution\WestWindSystem\obj\Debug\net7.0\WestWindSystem.sourcelink.json

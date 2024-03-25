@@ -10,7 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 //Retrieve the connectionstring from the appsettings
 //The connection string will be passed to the library extension method for use in registering the access to the DB
 var connectionString = builder.Configuration.GetConnectionString("WWDB");
-
 //Set up the registration of the services to be aavailable for use by the web app
 builder.Services.WWExtensions(options => options.UseSqlServer(connectionString));
 

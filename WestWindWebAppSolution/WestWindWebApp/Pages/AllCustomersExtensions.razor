@@ -16,6 +16,7 @@
 @code {
     [Inject]
     public CustomerServices customerServices { get; set; }
+
     public List<Customer> Customers { get; set; }
 
     protected override void OnInitialized()
@@ -23,5 +24,7 @@
         Customers = customerServices.GetAllCustomers();
         base.OnInitialized();
     }
+
+
 
 }

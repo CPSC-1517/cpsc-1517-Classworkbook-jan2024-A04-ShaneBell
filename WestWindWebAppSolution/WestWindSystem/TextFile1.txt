@@ -1,0 +1,10 @@
+﻿Setting up Extension Method
+
+1.Create a an extensions class (WestWindExtensions)
+2.Appsettings.json - Connection string
+3. Program.cs - Get the connection string by its name
+	Supply the options to the extension method
+4. Extensions class (WestWindExtensions)
+	Register the context service
+	Add an AddTransient for each services class (CustomerServices)
+
