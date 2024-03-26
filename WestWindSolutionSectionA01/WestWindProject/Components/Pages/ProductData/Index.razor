@@ -1,0 +1,34 @@
+﻿@page "/Product/index"
+@using WestWindWholesale.Models
+@using WestWindWholesale.DAL
+@using WestWindWholesale.BLL
+<h3>Index</h3>
+<ul>
+
+    @foreach(Product aProduct in productServices.GetAllProducts())
+    {
+    <li>
+        @aProduct.ProductName
+    </li>
+    }
+</ul>
+
+
+
+@code {
+    List<Product> ProductList = new();
+    ProductServices productServices;
+
+    protected override void OnInitialized()
+    {
+        WestWindContext context = new WestWindContext();
+
+        productServices = new ProductServices(context);
+
+
+
+        base.OnInitialized();
+    }
+
+
+}
