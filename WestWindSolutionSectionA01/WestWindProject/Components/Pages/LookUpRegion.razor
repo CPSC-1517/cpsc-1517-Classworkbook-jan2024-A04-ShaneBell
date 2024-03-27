@@ -1,0 +1,53 @@
+﻿@page "/lookupregion"
+
+@using WestWindWholesale.BLL
+@using WestWindWholesale.DAL
+@using WestWindWholesale.Models
+
+<h3>LookUpRegion</h3>
+
+<label for="regionid">Region ID </label>
+<input type="number" id="regionid" @bind="RegionID" />
+
+<button @onclick="DisplayRegion">Display Region</button>
+
+@* DDL to choose the region *@
+
+<select @bind="RegionIDFromDDL">
+    <option value="">Please choose a Region</option>
+    @foreach (Region aRegion in regionServices.GetAllRegions())
+    {
+<option value="@aRegion.RegionId">@aRegion.RegionDescription</option>
+    }
+</select>
+<button @onclick="DisplayRegionFromDDL">Display Region From DDL</button>
+
+@if (region != null)
+{
+    <p>Region ID: @region.RegionId</p>
+    <p>Description: @region.RegionDescription</p>
+}
+@code {
+    public int RegionID { get; set; }
+    public int RegionIDFromDDL { get; set; }
+    public Region? region { get; set; }
+    RegionServices regionServices;
+
+    protected override void OnInitialized()
+    {
+        WestWindContext context = new WestWindContext();
+        regionServices = new RegionServices(context);
+    }
+
+    public void DisplayRegion()
+    {
+        region = regionServices.LookUpRegionByID(RegionID);
+    }
+    public void DisplayRegionFromDDL()
+    {
+        region = regionServices.LookUpRegionByID(RegionIDFromDDL);
+    }
+
+
+
+}

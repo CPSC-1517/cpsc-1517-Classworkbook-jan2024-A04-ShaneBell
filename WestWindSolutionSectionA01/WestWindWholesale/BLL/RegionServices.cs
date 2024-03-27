@@ -8,21 +8,24 @@ using WestWindWholesale.Models;
 
 namespace WestWindWholesale.BLL
 {
-    public class ProductServices
+    public class RegionServices
     {
         //holds the context
         private readonly WestWindContext _context;
 
         //give the context the data it needs to connect
-        public ProductServices(WestWindContext context)
+        public RegionServices(WestWindContext context)
         {
             _context = context;
         }
 
-        //Method to list all the products
-        public List<Product> GetAllProducts(string customerID)
+        public Region LookUpRegionByID(int regionID)
         {
-            return _context.Products.ToList();
+            return _context.Regions.Where(R => R.RegionId == regionID).FirstOrDefault();
+        }
+        public List<Region> GetAllRegions()
+        {
+            return _context.Regions.ToList();
         }
 
 

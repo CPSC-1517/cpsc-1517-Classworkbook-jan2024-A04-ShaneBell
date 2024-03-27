@@ -1,0 +1,62 @@
+﻿@page "/customerorders"
+
+@using WestWindWholesale.BLL
+@using WestWindWholesale.DAL
+@using WestWindWholesale.Models
+<h3>LookUpCustomerOrders</h3>
+
+<select @bind="CustomerID">
+    <option value="">Please choose a Customer</option>
+    @foreach (Customer aCustomer in customerServices.GetAllCustomers())
+    {
+<option value="@aCustomer.CustomerId">@aCustomer.CompanyName</option>
+    }
+</select>
+<button @onclick="ListOrdersForCustomer">Orders</button>
+
+@if(Orders !=null)
+{
+    <table>
+        @foreach(Order aOrder in Orders)
+        {
+        <tr><td>@aOrder.OrderId</td></tr>
+        }
+    </table>
+
+
+}
+
+
+@code {
+    public string CustomerID { get; set; }
+    public List<Customer> Customers { get; set; }
+    public List<Order> Orders { get; set; }
+
+    CustomerServices customerServices;
+    OrderServices orderServices;
+
+
+    protected override void OnInitialized()
+    {
+        WestWindContext context = new WestWindContext();
+        customerServices = new CustomerServices(context);
+        orderServices = new OrderServices(context);
+    }
+
+    public void ListAllCustomers()
+    {
+        Customers = customerServices.GetAllCustomers();
+    }
+
+    public void ListOrdersForCustomer()
+    {
+        Orders = orderServices.LookUpOrdersByCustomerID(CustomerID);
+    }
+
+
+
+
+
+
+
+}

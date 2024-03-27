@@ -5,18 +5,17 @@
 <h3>Index</h3>
 <ul>
 
-    @foreach(Product aProduct in productServices.GetAllProducts())
+    @* @foreach(Product aProduct in productServices.GetAllProducts())
     {
     <li>
         @aProduct.ProductName
     </li>
-    }
+    } *@
 </ul>
 
 
-
 @code {
-    List<Product> ProductList = new();
+    
     ProductServices productServices;
 
     protected override void OnInitialized()
