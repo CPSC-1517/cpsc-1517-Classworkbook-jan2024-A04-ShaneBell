@@ -1,0 +1,58 @@
+﻿@page "/customerorders"
+
+@using WestWindSystem.BLL
+@using WestWindSystem.Entities
+
+<h3>Customer Orders</h3>
+
+<div class="mb-3">
+    <select class="form-select" id="customer" @bind="CustomerID">
+        <option value="0">Please choose a customer</option>
+        @foreach (Customer aCustomer in Customers)
+        {
+            <option value="@aCustomer.CustomerId">@aCustomer.CompanyName</option>
+        }
+    </select>
+    <button class="btn btn-primary" @onclick="DisplayOrders">Display Order</button>
+</div>
+
+@if (Orders != null)
+{
+    <div style="max-height:200px" class="overflow-scroll">
+    <table class="table table-striped">
+        <thead>
+            <tr><th>OrderID</th><th>OrderDate</th></tr>
+        </thead>
+        <tbody>
+            @foreach (Order aOrder in Orders)
+            {
+                <tr><td>@aOrder.OrderId</td><td>@aOrder.OrderDate</td></tr>
+            }
+        </tbody>
+    </table>
+    </div>
+}
+
+
+@code {
+    [Inject]
+    private CustomerServices CustomerServices { get; set; }
+    [Inject]
+    private OrderServices OrderServices { get; set; }
+
+    public string CustomerID { get; set; }
+    public List<Customer> Customers { get; set; }
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Customers = CustomerServices.GetAllCustomers();
+        base.OnInitialized();
+    }
+
+    public void DisplayOrders()
+    {
+        Orders = OrderServices.LookupOrdersByCustomerID(CustomerID);
+    }
+
+}

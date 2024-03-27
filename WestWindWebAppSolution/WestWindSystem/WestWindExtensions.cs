@@ -47,6 +47,15 @@ namespace WestWindSystem
                 //Supply the context reference to the service class constructor
                 return new RegionServices(context);
             });
+
+            services.AddTransient<OrderServices>((ServiceProvider) =>
+            {
+                //Get the Context class that was resitered above
+                var context = ServiceProvider.GetService<WestWindContext>();
+                //Create an instance of the serivce class
+                //Supply the context reference to the service class constructor
+                return new OrderServices(context);
+            });
         }       
     }
 }

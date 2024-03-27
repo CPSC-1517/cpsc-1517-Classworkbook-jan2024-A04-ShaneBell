@@ -10,6 +10,18 @@
     <input class="form-control" type="text" id="regionid" @bind="RegionID" />
     <button class="btn btn-primary" @onclick="DisplayRegion">Display Region</button>
 </div>
+
+<div class="mb-3">
+    <select class="form-select" id="region" @bind="RegionID">
+        <option value="0">Please choose a region</option>
+        @foreach(Region aRegion in Regions)
+        {
+            <option value="@aRegion.RegionId">@aRegion.RegionDescription</option>
+        }        
+    </select>
+    <button class="btn btn-primary" @onclick="DisplayRegion">Display Region</button>
+</div>
+
 @if (Region !=null)
 {
 <div class="mb-3">
@@ -24,13 +36,22 @@
 
     private int RegionID { get; set; }//Property to hold the search criteria from the text box
     private Region? Region { get; set; }
-    private int test;
+    private List<Region> Regions { get; set; }
 
     public void DisplayRegion()
     {
         //Pass the value from the text box(RegionID property) to the lookup method
         Region = regionServices.LookupRegionByID(RegionID);
     }
+
+    protected override void OnInitialized()
+    {
+        Regions = regionServices.GetAllRegions();
+        base.OnInitialized();
+    }
+
+
+
 
     //EXERCISE
     //Create a DDL showing all the region descriptions
