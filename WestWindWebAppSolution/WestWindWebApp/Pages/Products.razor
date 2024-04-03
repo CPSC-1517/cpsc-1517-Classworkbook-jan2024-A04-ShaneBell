@@ -1,0 +1,79 @@
+﻿@page "/products"
+
+
+@using WestWindSystem.BLL;
+@using WestWindSystem.DAL;
+@using WestWindSystem.Entities;
+
+<h3>Products <span style="float:right;"><a class="btn btn-success" href="/ProductMaintenance">New Product</a></span></h3>
+<div class="mb-3">
+    <select class="form-select" id="category" style="width:300px" @bind="CategoryID">
+        <option value=0>Please choose a category</option>
+        @foreach (Category aCategory in CategoryServices.GetAllCategories())
+        {
+            <option value="@aCategory.CategoryId">@aCategory.CategoryName</option>
+        }
+    </select>
+</div>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="DisplayProducts">Display Products</button>
+</div>
+
+<div class="mb-3">
+    <label class="form-label" for ="productname">Partial Product Name</label>
+    <input class ="form-control" type="text" id="productname" @bind="PartialSearch"/>
+</div>
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="DisplayProductsByName">Display Products</button>
+</div>
+
+@if (ProductsbyCategory != null)
+{
+    <div style="max-height:300px" class="overflow-scroll">
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Action</th><th>ProductID</th><th>Product Name</th><th>Supplier</th><th>Unit Price</th><th>Discontinued</th></tr>
+            </thead>
+            <tbody>
+                @foreach (Product aProduct in ProductsbyCategory)
+                {
+                    <tr>
+                        <td><a href="/productmaintenance/@aProduct.ProductId">View / Edit</a></td>
+                        <td>@aProduct.ProductId</td>
+                        <td>@aProduct.ProductName</td>
+                        <td>        
+                            @aProduct.Supplier.CompanyName
+                        </td>
+                        <td>@aProduct.UnitPrice</td>
+                        <td><input type="checkbox" checked="@aProduct.Discontinued" /></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    [Inject]
+    private CategoryServices CategoryServices { get; set; }
+    [Inject]
+    private ProductServices ProductServices { get; set; }
+    
+    public int CategoryID { get; set; }
+    public List<Category> Categories { get; set; }
+
+    public List<Product> ProductsbyCategory { get; set; }
+
+    public string PartialSearch { get; set; }
+
+    public void DisplayProducts()
+    {
+        ProductsbyCategory = ProductServices.GetProductsByCategoryID(CategoryID);
+    }
+    public void DisplayProductsByName()
+    {
+        ProductsbyCategory = ProductServices.GetProductsByPartialName(PartialSearch);
+    }
+
+}

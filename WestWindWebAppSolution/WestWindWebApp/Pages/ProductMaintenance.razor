@@ -1,0 +1,29 @@
+﻿@page "/productmaintenance/{productId:int}"
+
+<h3>Product Maintenance</h3>
+
+<p>@Product.ProductName</p>
+
+@code {
+    @using WestWindSystem.Entities;
+    @using WestWindSystem.BLL;
+
+    [Inject]
+    ProductServices ProductServices{ get; set; }
+
+    [Parameter]
+    public int ProductID { get; set; }
+
+    private Product Product{ get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (ProductID != 0)
+        {
+            Product = ProductServices.GetProductById(ProductID);
+        }
+
+        base.OnInitialized();
+    }
+
+}
