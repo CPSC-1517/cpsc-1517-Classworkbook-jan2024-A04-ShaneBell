@@ -1,20 +1,107 @@
-﻿@page "/productmaintenance/{productId:int}"
+﻿@page "/ProductMaintenance/{productId:int?}"
 
-<h3>Product Maintenance</h3>
+@* if the new button is pressed on products page display a heading "Add Product". Otherwise display a heading "View/Edit Product" *@
 
-<p>@Product.ProductName</p>
+@if (ProductID == 0)
+{
+    <h3>Add Product</h3>
+}
+else
+{
+    <h3>View/Edit Product</h3>
+
+<div class="row bm-3">
+    <div class="col-3">
+        <label class="form-label" for="productid">ID</label>
+        <input class="form-control" type="text" id="productid" @bind="@Product.ProductId" />
+    </div>    
+
+
+<div class="col-6">
+    <label class="form-label" for="name">Name</label>
+    <input class="form-control" type="text" id="name" @bind="@Product.ProductName" />
+</div>
+</div>
+
+<div class="row bm-3">
+    <div class="col-3">
+        <label class="form-label" for="qytperunit">Quantity Per Unit</label>
+        <input class="form-control" type="text" id="qytperunit" @bind="@Product.QuantityPerUnit" />
+    </div>
+
+
+    <div class="col-6">
+        <label class="form-label" for="minorderqty">Minimum Order Quantity</label>
+        <input class="form-control" type="text" id="minorderqty" @bind="@Product.MinimumOrderQuantity" />
+    </div>
+</div>
+
+
+<div class="row bm-3">
+    <div class="col-3">
+        <label class="form-label" for="unitprice">Unit Price</label>
+        <input class="form-control" type="text" id="unitprice" @bind="@Product.UnitPrice" />
+    </div>
+
+    <div class="col-6">
+        <label class="form-label" for="unitsonorder">Units On Order</label>
+        <input class="form-control" type="text" id="unitsonorder" @bind="@Product.UnitsOnOrder" />
+    </div>
+</div>
+
+
+<div class="row bm-3">
+    <div class="col-3">
+        <label class="form-label" for="category">Category</label>
+        <select class="form-select" id="category" style="width:300px" @bind="Product.CategoryId">
+            <option value=0>Please choose a category</option>
+            @foreach (Category aCategory in CategoryServices.GetAllCategories())
+            {
+                <option value="@aCategory.CategoryId">@aCategory.CategoryName</option>
+            }
+        </select>
+
+        
+    </div>
+
+
+    <div class="col-6">
+        <label class="form-label" for="supplier">Category</label>
+        <select class="form-select" id="supplier" style="width:300px" @bind="Product.SupplierId">
+            <option value=0>Please choose a supplier</option>
+            @foreach (Supplier aSupplier in SupplierServices.GetAllSuppliers())
+            {
+                <option value="@aSupplier.SupplierId">@aSupplier.CompanyName</option>
+            }
+        </select>
+    </div>
+</div>
+
+<div class="mt-3">
+<button class="btn btn-primary" @* @onclick="UpdateProduct" *@>Update Product</button>
+
+</div>
+
+
+}
 
 @code {
+
+    [Inject]
+    private CategoryServices CategoryServices { get; set; }
+    [Inject]
+    private SupplierServices SupplierServices { get; set; }
+
     @using WestWindSystem.Entities;
     @using WestWindSystem.BLL;
 
     [Inject]
-    ProductServices ProductServices{ get; set; }
+    private ProductServices ProductServices { get; set; }
 
     [Parameter]
     public int ProductID { get; set; }
 
-    private Product Product{ get; set; }
+    private Product Product { get; set; }
 
     protected override void OnInitialized()
     {
