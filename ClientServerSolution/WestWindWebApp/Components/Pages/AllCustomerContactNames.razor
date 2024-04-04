@@ -1,0 +1,45 @@
+﻿@page "/CustomerContactList"
+
+@using WestWindSystem.BLL;
+@using WestWindSystem.DAL;
+@using WestWindSystem.Entities;
+
+<h3>AllCustomerContactNames</h3>
+
+@* List all customer contact names in an unorderd list *@
+
+<ul>
+    @foreach (Customer aCustomer in customerServices.GetAllCustomers())
+    {
+        <li>@aCustomer.ContactName</li>
+    }
+</ul>
+
+@code {
+    //List<Customer> customerList = new();
+
+    CustomerServices customerServices;
+
+    protected override Task OnInitializedAsync()
+    {
+        WestWindContext context = new WestWindContext();
+        customerServices = new CustomerServices(context);
+
+        //customerList = customerServices.GetAllCustomers();
+        return base.OnInitializedAsync();
+    }
+}
+
+@* using WestWindSystem.BLL;
+using WestWindSystem.DAL;
+using WestWindSystem.Entities;
+
+WestWindContext context = new WestWindContext();
+
+CustomerServices customerServices = new CustomerServices(context);
+
+foreach(Customer aCustomer in customerServices.GetAllCustomers())
+{
+    Console.WriteLine(aCustomer.ContactName);
+}
+ *@

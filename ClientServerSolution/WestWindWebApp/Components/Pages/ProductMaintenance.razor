@@ -1,0 +1,29 @@
+﻿@page "/ProductMaintenance/{ProductID:int}"
+<h3>Product Maintenance</h3>
+
+<p>@ProductID</p>
+<p>@Product.ProductName</p>
+<p>@Product.UnitPrice</p>
+
+@code {
+    @using WestWindSystem.Entities;
+    @using WestWindSystem.BLL;
+    [Parameter]
+    public int ProductID { get; set; }
+
+    [Inject]
+    ProductServices ProductServices { get; set; }
+
+    Product Product { get; set; }
+    protected override void OnInitialized()
+    {
+        Product = ProductServices.LookProductByID(ProductID);
+        base.OnInitialized();
+    }
+
+  
+
+    //When the page is opened display the Productname and unitprice on the screen
+
+
+}

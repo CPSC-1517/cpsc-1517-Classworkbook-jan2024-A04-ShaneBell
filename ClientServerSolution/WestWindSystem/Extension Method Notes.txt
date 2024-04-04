@@ -1,0 +1,22 @@
+﻿1.Appsettings.json
+--Connection string
+"ConnectionStrings": {"WWDB": "Server=.\\SQLEXPRESS;Database =WestWind;Trusted_Connection=true;MultipleActiveResultSets=true;encrypt=false"}
+
+2. Program.cs
+--Get the connection string by its name
+var connectionString = builder.Configuration.GetConnectionString("WWDB");
+--Supply the options to the WWExtensions method in WestWindExtensions class
+builder.Services.WWExtensions(options=> options.UseSqlServer(connectionString));
+
+3. WestWindExtensions.cs
+--Register the context
+ services.AddDbContext<WestWindContext>(options);
+ --Register each services class (BLL) as an AddTransient
+  services.AddTransient<CustomerServices>((ServiceProvider) =>
+            {
+                var context = ServiceProvider.GetService<WestWindContext>();
+                return new CustomerServices(context);
+            });        
+
+4. When we use the services we must [Inject] them into the class on the Client(Blazor component)
+5. We can now use the methods through the static services (no instantiation needed)

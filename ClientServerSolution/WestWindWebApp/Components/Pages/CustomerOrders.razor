@@ -1,0 +1,61 @@
+﻿@page "/lookuporders"
+
+<h3>CustomerOrders</h3>
+@using WestWindSystem.BLL;
+@using WestWindSystem.DAL;
+@using WestWindSystem.Entities;
+
+
+<div class="mb-3">
+    <select class="form-select" id="customer" @bind="CustomerID">
+        <option value="">Please choose a customer</option>
+        @foreach (Customer aCustomer in CustomerServices.GetAllCustomers())
+        {
+            <option value="@aCustomer.CustomerId">@aCustomer.CompanyName</option>
+        }
+    </select>
+</div>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="DisplayOrders">Display Orders</button>
+</div>
+
+@if(Orders !=null)
+{
+    <div style="max-height:300px" class="overflow-scroll">
+    <table class="table table-striped">
+    <thead>
+        <tr><th>OrderID</th><th>Order Date</th><th>Shipped</th></tr>
+    </thead>    
+    <tbody>
+        @foreach(Order aOrder in Orders)
+            {
+                    <tr><td>@aOrder.OrderId</td><td>@aOrder.OrderDate</td><td><input type="checkbox" checked="@aOrder.Shipped" /></td></tr>
+            }
+    </tbody>   
+    </table>
+    </div>
+
+}
+
+
+
+
+
+@code {
+    [Inject]
+    private CustomerServices CustomerServices { get; set; }
+    [Inject]
+    private OrderServices OrderServices { get; set; }
+
+    public string CustomerID { get; set; }
+    public List<Customer> Customers { get; set; }
+    public List<Order> Orders { get; set; }
+
+    public void DisplayOrders()
+    {
+        Orders = OrderServices.GetOrderByCustomerID(CustomerID);   
+    }
+
+
+}
