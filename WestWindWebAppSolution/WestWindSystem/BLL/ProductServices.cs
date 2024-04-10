@@ -42,5 +42,25 @@ namespace WestWindSystem.BLL
             return _context.Products.Where(p=>p.ProductId==productID).FirstOrDefault();
         }
 
+        public void UpdateProduct(Product product) //Accept the product object that contains the updated product
+        { 
+            if(product == null) 
+            {
+                throw new ArgumentNullException("Product argument cannot be null");            
+            }
+            _context.Products.Update(product);
+            _context.SaveChanges();       
+        }
+
+        public void DiscontinueProduct(Product product) //Accept the product object that contains the updated product
+        {
+            if (product == null)
+            {
+                throw new ArgumentNullException("Product argument cannot be null");
+            }
+            product.Discontinued = true;
+            UpdateProduct(product);
+        }
+
     }
 }

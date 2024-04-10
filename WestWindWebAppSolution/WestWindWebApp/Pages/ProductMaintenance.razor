@@ -2,6 +2,8 @@
 
 @* if the new button is pressed on products page display a heading "Add Product". Otherwise display a heading "View/Edit Product" *@
 
+@* If a discontinued product is loaded, disable all the controls and do not show any buttons*@
+
 @if (ProductID == 0)
 {
     <h3>Add Product</h3>
@@ -9,18 +11,27 @@
 else
 {
     <h3>View/Edit Product</h3>
-
+}
+@if (Errors.Count > 0)
+{
+    <div class=" = alert alert-danger">
+        @foreach (var errors in Errors)
+        {
+            <p>@errors.Value</p>
+        }
+    </div>
+}
 <div class="row bm-3">
     <div class="col-3">
         <label class="form-label" for="productid">ID</label>
-        <input class="form-control" type="text" id="productid" @bind="@Product.ProductId" />
-    </div>    
+        <input class="form-control" type="text" id="productid" @bind="@Product.ProductId"    />
+    </div>
 
 
-<div class="col-6">
-    <label class="form-label" for="name">Name</label>
-    <input class="form-control" type="text" id="name" @bind="@Product.ProductName" />
-</div>
+    <div class="col-6">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" type="text" id="name" @bind="@Product.ProductName" />
+    </div>
 </div>
 
 <div class="row bm-3">
@@ -60,13 +71,10 @@ else
                 <option value="@aCategory.CategoryId">@aCategory.CategoryName</option>
             }
         </select>
-
-        
     </div>
 
-
     <div class="col-6">
-        <label class="form-label" for="supplier">Category</label>
+        <label class="form-label" for="supplier">Supplier</label>
         <select class="form-select" id="supplier" style="width:300px" @bind="Product.SupplierId">
             <option value=0>Please choose a supplier</option>
             @foreach (Supplier aSupplier in SupplierServices.GetAllSuppliers())
@@ -78,12 +86,14 @@ else
 </div>
 
 <div class="mt-3">
-<button class="btn btn-primary" @* @onclick="UpdateProduct" *@>Update Product</button>
+    <button class="btn btn-primary" @onclick="UpdateProduct">Update Product</button>
+    <button class="btn btn-primary" @onclick="DiscontinueProduct">Discontinue Product</button>
+
 
 </div>
 
 
-}
+
 
 @code {
 
@@ -101,7 +111,9 @@ else
     [Parameter]
     public int ProductID { get; set; }
 
-    private Product Product { get; set; }
+    private Product Product { get; set; } = new();
+
+    private Dictionary<string, string> Errors { get; set; } = new();
 
     protected override void OnInitialized()
     {
@@ -110,7 +122,63 @@ else
             Product = ProductServices.GetProductById(ProductID);
         }
 
+
         base.OnInitialized();
     }
+    private void UpdateProduct()
+    {
+        if (ValidateForm())
+        {
+            try
+            {
+                ProductServices.UpdateProduct(Product);
+            }
+            catch (Exception ex)
+            {
+                Errors.Add("product-update", ex.Message);
+            }
+        }
+    }
 
+    private void DiscontinueProduct()
+    {
+        try
+        {
+            ProductServices.DiscontinueProduct(Product);
+        }
+        catch (Exception ex)
+        {
+            Errors.Add("product-discontinue", ex.Message);
+        }
+    }
+
+    private bool ValidateForm()
+    {
+        Errors.Clear();
+        if (string.IsNullOrWhiteSpace(Product.ProductName))
+        {
+            Errors.Add("product-name", "Product Name cannot be empty");
+        }
+        if (string.IsNullOrWhiteSpace(Product.QuantityPerUnit))
+        {
+            Errors.Add("quantity", "Product Name cannot be empty");
+        }
+        if (Product.UnitPrice <= 0)
+        {
+            Errors.Add("unit-price", "Unit price must be greater than 0");
+        }
+        if (Product.UnitsOnOrder < 0)
+        {
+            Errors.Add("unit-order", "Unit on order cannot be negative");
+        }        
+        if (Product.CategoryId == 0)
+        {
+            Errors.Add("category", "Must choose a category");
+        }
+        if (Product.SupplierId == 0)
+        {
+            Errors.Add("category", "Must choose a supplier");
+        }
+        return Errors.Count == 0;//Did the validation pass
+    }
 }
