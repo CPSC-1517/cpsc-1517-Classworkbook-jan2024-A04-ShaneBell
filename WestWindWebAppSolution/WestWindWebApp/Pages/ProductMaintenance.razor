@@ -21,29 +21,40 @@ else
         }
     </div>
 }
+
+@if (Product.Discontinued)
+{
+    <div class ="mb-3">
+        <div class="alert alert-warning fw-bold">
+            PRODUCT DISCONTINUED
+        </div>
+    </div>
+}
+
+
 <div class="row bm-3">
     <div class="col-3">
         <label class="form-label" for="productid">ID</label>
-        <input class="form-control" type="text" id="productid" @bind="@Product.ProductId"    />
+        <input class="form-control" type="text" id="productid" @bind="@Product.ProductId" disabled  />
     </div>
 
 
     <div class="col-6">
         <label class="form-label" for="name">Name</label>
-        <input class="form-control" type="text" id="name" @bind="@Product.ProductName" />
+        <input class="form-control" type="text" id="name" @bind="@Product.ProductName" disabled="@(Product.Discontinued? true:false)" />
     </div>
 </div>
 
 <div class="row bm-3">
     <div class="col-3">
         <label class="form-label" for="qytperunit">Quantity Per Unit</label>
-        <input class="form-control" type="text" id="qytperunit" @bind="@Product.QuantityPerUnit" />
+        <input class="form-control" type="text" id="qytperunit" @bind="@Product.QuantityPerUnit" disabled="@(Product.Discontinued? true:false)" />
     </div>
 
 
     <div class="col-6">
         <label class="form-label" for="minorderqty">Minimum Order Quantity</label>
-        <input class="form-control" type="text" id="minorderqty" @bind="@Product.MinimumOrderQuantity" />
+        <input class="form-control" type="text" id="minorderqty" @bind="@Product.MinimumOrderQuantity" disabled="@(Product.Discontinued? true:false)" />
     </div>
 </div>
 
@@ -51,12 +62,12 @@ else
 <div class="row bm-3">
     <div class="col-3">
         <label class="form-label" for="unitprice">Unit Price</label>
-        <input class="form-control" type="text" id="unitprice" @bind="@Product.UnitPrice" />
+        <input class="form-control" type="text" id="unitprice" @bind="@Product.UnitPrice" disabled="@(Product.Discontinued? true:false)" />
     </div>
 
     <div class="col-6">
         <label class="form-label" for="unitsonorder">Units On Order</label>
-        <input class="form-control" type="text" id="unitsonorder" @bind="@Product.UnitsOnOrder" />
+        <input class="form-control" type="text" id="unitsonorder" @bind="@Product.UnitsOnOrder" disabled="@(Product.Discontinued? true:false)" />
     </div>
 </div>
 
@@ -64,7 +75,7 @@ else
 <div class="row bm-3">
     <div class="col-3">
         <label class="form-label" for="category">Category</label>
-        <select class="form-select" id="category" style="width:300px" @bind="Product.CategoryId">
+        <select class="form-select" id="category" style="width:300px" @bind="Product.CategoryId" disabled="@(Product.Discontinued? true:false)">
             <option value=0>Please choose a category</option>
             @foreach (Category aCategory in CategoryServices.GetAllCategories())
             {
@@ -75,7 +86,7 @@ else
 
     <div class="col-6">
         <label class="form-label" for="supplier">Supplier</label>
-        <select class="form-select" id="supplier" style="width:300px" @bind="Product.SupplierId">
+        <select class="form-select" id="supplier" style="width:300px" @bind="Product.SupplierId" disabled="@(Product.Discontinued? true:false)">
             <option value=0>Please choose a supplier</option>
             @foreach (Supplier aSupplier in SupplierServices.GetAllSuppliers())
             {
@@ -85,13 +96,15 @@ else
     </div>
 </div>
 
-<div class="mt-3">
-    <button class="btn btn-primary" @onclick="UpdateProduct">Update Product</button>
-    <button class="btn btn-primary" @onclick="DiscontinueProduct">Discontinue Product</button>
-
-
-</div>
-
+@* Do not show buttons for discontinued products *@
+@if (!Product.Discontinued)
+{
+    <div class="mt-3">
+        <button class="btn btn-primary" @onclick="SaveProduct">Save Product</button>
+        <button class="btn btn-primary" @onclick="DiscontinueProduct">Discontinue Product</button>
+        <button class="btn btn-primary" @onclick="DeleteProduct">Delete Product</button>
+    </div>
+}
 
 
 
@@ -125,17 +138,46 @@ else
 
         base.OnInitialized();
     }
-    private void UpdateProduct()
+    private void SaveProduct()
+    {
+        if (ValidateForm())
+        {
+            if (ProductID == 0)
+            {
+                try
+                {
+                    ProductServices.AddProduct(Product);
+                }
+                catch (Exception ex)
+                {
+                    Errors.Add("product-Add", ex.Message);
+                }
+            }
+            else
+            {
+                try
+                {
+                    ProductServices.UpdateProduct(Product);
+                }
+                catch (Exception ex)
+                {
+                    Errors.Add("product-update", ex.Message);
+                }
+            }
+        }
+    }
+
+    private void DeleteProduct()
     {
         if (ValidateForm())
         {
             try
             {
-                ProductServices.UpdateProduct(Product);
+                ProductServices.DeleteProduct(Product);
             }
             catch (Exception ex)
             {
-                Errors.Add("product-update", ex.Message);
+                Errors.Add("product-delete", ex.Message);
             }
         }
     }

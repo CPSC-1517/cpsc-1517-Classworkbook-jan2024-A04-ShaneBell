@@ -52,6 +52,25 @@ namespace WestWindSystem.BLL
             _context.SaveChanges();       
         }
 
+        public void AddProduct(Product product) //Accept the product object that contains the updated product
+        {
+            if (product == null)
+            {
+                throw new ArgumentNullException("Product argument cannot be null");
+            }
+            _context.Products.Add(product);
+            _context.SaveChanges();
+        }
+        public void DeleteProduct(Product product) //Accept the product object that contains the updated product
+        {
+            if (product == null)
+            {
+                throw new ArgumentNullException("Product argument cannot be null");
+            }
+            _context.Products.Remove(product);
+            _context.SaveChanges();
+        }
+
         public void DiscontinueProduct(Product product) //Accept the product object that contains the updated product
         {
             if (product == null)
@@ -61,6 +80,5 @@ namespace WestWindSystem.BLL
             product.Discontinued = true;
             UpdateProduct(product);
         }
-
     }
 }

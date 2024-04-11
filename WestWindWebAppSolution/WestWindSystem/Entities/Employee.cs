@@ -30,6 +30,15 @@ public partial class Employee
     [StringLength(30)]
     public string JobTitle { get; set; }
 
+    [NotMapped]
+    public string Fullname
+    {
+        get
+        {
+            return LastName +", " + FirstName;
+        }
+    }
+
     public int? ReportsTo { get; set; }
 
     [Column(TypeName = "datetime")]
